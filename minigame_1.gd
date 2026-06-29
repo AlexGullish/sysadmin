@@ -23,13 +23,16 @@ func _process(delta: float) -> void: # running every frame brochacho
 	if cpu_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
 		Global.minigames_done += 1
 		if Global.minigames_done >= 3: # we access a global script and see how many minigames have been compeleted
-			get_tree().change_scene_to_file("res://done_screen.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
+			get_tree().change_scene_to_file("res://done.tscn.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
 		else:
 			get_tree().change_scene_to_file("res://level_scene.tscn")
 	
 	if timer_end: # if the timer does end... #go back a minigame
 		Global.lives -= 1 # lose ur lives
-		get_tree().change_scene_to_file("res://level_scene.tscn") # back to intermission
+		if Global.lives == 0:
+			get_tree().change_scene_to_file("res://lose.tscn")
+		else:
+			get_tree().change_scene_to_file("res://level_scene.tscn") # back to intermission
 		
 func cpu_collect() -> void: # cool function that you connect to those garlics
 	cpu_collected = cpu_collected +1

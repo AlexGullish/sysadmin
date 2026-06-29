@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://bwiv6sp0b72fj"
+Music="*uid://c4lyyiaf57sc7"
 
 [display]
 

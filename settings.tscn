@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cvk8id6yn25up"]
+
+[ext_resource type="Script" uid="uid://305vdcoabve8" path="res://settings.gd" id="1_nkug2"]
+[ext_resource type="Texture2D" uid="uid://1tik3ok0ukr3" path="res://scifi_panel_1_color_1k.png" id="1_x2hje"]
+
+[node name="Node2D" type="Node2D" unique_id=2041059091]
+script = ExtResource("1_nkug2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=959563931]
+offset_right = 1153.0
+offset_bottom = 1024.0
+texture = ExtResource("1_x2hje")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=497260056]
+offset_left = 476.0
+offset_top = 314.0
+offset_right = 709.0
+offset_bottom = 606.0
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=716823392]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

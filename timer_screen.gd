@@ -40,9 +40,6 @@ func _process(delta: float) -> void:
 func Timer(start_time: float):
 	time = start_time
 	while time > 0.0:
-		await wait(0.1)
+		await get_tree().create_timer(0.1).timeout
 		time -= 0.1
 	return
-
-func wait(seconds: float) -> void:
-	await get_tree().create_timer(seconds).timeout

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c4lyyiaf57sc7"]
+
+[ext_resource type="AudioStream" uid="uid://comhcf14yycds" path="res://Animal Town.mp3" id="1_3h6ak"]
+
+[node name="Node2D" type="Node2D" unique_id=517715706]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1743233019]
+stream = ExtResource("1_3h6ak")
+autoplay = true

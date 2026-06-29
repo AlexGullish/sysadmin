@@ -18,5 +18,8 @@ func _process(delta: float) -> void:
 
 func _on_kill_zone_body_entered(body: Node2D) -> void:
 	Global.lives -= 1
-	Global.minigames_done = 2
-	get_tree().change_scene_to_file("res://level_scene.tscn")
+	if Global.lives == 0:
+		get_tree().change_scene_to_file("res://lose.tscn")
+	else:
+		Global.minigames_done = 2
+		get_tree().change_scene_to_file("res://level_scene.tscn")

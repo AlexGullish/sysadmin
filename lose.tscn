@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dnr8e2koufv3i"]
 
+[ext_resource type="Script" uid="uid://dm2dhv5hchu6y" path="res://lose.gd" id="1_46blr"]
 [ext_resource type="Texture2D" uid="uid://1tik3ok0ukr3" path="res://scifi_panel_1_color_1k.png" id="1_pl8j0"]
 [ext_resource type="Texture2D" uid="uid://dtnorvol8rk4d" path="res://pixil-frame-0(1).png" id="2_46blr"]
 
 [node name="Node2D" type="Node2D" unique_id=1468504126]
+script = ExtResource("1_46blr")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1284510193]
 offset_right = 1154.0
@@ -68,3 +70,6 @@ offset_bottom = 511.0
 offset_transform_enabled = true
 offset_transform_rotation = -4.0264745
 color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
