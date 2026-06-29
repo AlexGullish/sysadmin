@@ -12,10 +12,8 @@ var time
 
 func _ready() -> void:
 	await Timer(5.0)
-	
-	if Global.minigames_done < 3:
-		Global.minigames_done = Global.minigames_done + 1
-		get_tree().change_scene_to_file("res://minigames/minigame_" + str(Global.minigames_done)+".tscn")
+	get_tree().change_scene_to_file("res://minigame_" + str(Global.minigames_done+1)+".tscn")
+		
 
 func _process(delta: float) -> void:
 	match Global.lives:
@@ -36,7 +34,7 @@ func _process(delta: float) -> void:
 		0:
 			CPU_container.hide()
 	timer.text = str(time)
-	level.text = "Level " + str(Global.minigames_done)
+	level.text = "Level " + str(Global.minigames_done+1)
 func Timer(start_time: float):
 	time = start_time
 	while time > 0.0:

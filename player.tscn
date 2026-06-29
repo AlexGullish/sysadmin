@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d0y0pqxb22bl8"]
+
+[ext_resource type="Texture2D" uid="uid://di074gd6wbyb5" path="res://Dino (1).png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://nknngt6wlowq" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1urv3"]
+radius = 33.24154
+
+[node name="Player" type="CharacterBody2D" unique_id=557167645]
+script = ExtResource("1_onrkg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=541786684]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=428780933]
+shape = SubResource("CircleShape2D_1urv3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=460501117]
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=50633539]
+shape = SubResource("CircleShape2D_1urv3")

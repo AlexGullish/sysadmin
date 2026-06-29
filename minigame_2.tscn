@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dcdtfypt4giha"]
+
+[ext_resource type="Script" uid="uid://vifsgtb4qqxr" path="res://minigame_2.gd" id="1_5x31c"]
+[ext_resource type="Texture2D" uid="uid://1tik3ok0ukr3" path="res://scifi_panel_1_color_1k.png" id="1_ksr4o"]
+[ext_resource type="Script" uid="uid://cpgljrr3an2jd" path="res://cpu_click.gd" id="4_5x31c"]
+[ext_resource type="PackedScene" uid="uid://dlodwni6ljp2c" path="res://minigame_timer.tscn" id="5_3qiw4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3qiw4"]
+load_path = "res://.godot/imported/sr20f9583311551.png-79642991509442b91cc336e8fa5eabc2.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=1495497975]
+script = ExtResource("1_5x31c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1653728038]
+offset_right = 1149.0
+offset_bottom = 646.0
+texture = ExtResource("1_ksr4o")
+
+[node name="MinigameTimer" parent="." unique_id=27844687 instance=ExtResource("5_3qiw4")]
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1526361247]
+offset_left = 237.0
+offset_top = 107.0
+offset_right = 331.0
+offset_bottom = 202.54099
+offset_transform_enabled = true
+texture_normal = SubResource("CompressedTexture2D_3qiw4")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_5x31c")
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=887868899]
+offset_left = 787.0
+offset_top = 158.0
+offset_right = 881.0
+offset_bottom = 253.54099
+offset_transform_enabled = true
+texture_normal = SubResource("CompressedTexture2D_3qiw4")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_5x31c")
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=425373463]
+offset_left = 848.0
+offset_top = 477.0
+offset_right = 942.0
+offset_bottom = 572.541
+offset_transform_enabled = true
+texture_normal = SubResource("CompressedTexture2D_3qiw4")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_5x31c")
+
+[node name="TextureButton4" type="TextureButton" parent="." unique_id=753292505]
+offset_left = 93.0
+offset_top = 519.0
+offset_right = 187.0
+offset_bottom = 614.541
+offset_transform_enabled = true
+texture_normal = SubResource("CompressedTexture2D_3qiw4")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_5x31c")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton2" to="TextureButton2" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton3" to="TextureButton3" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton4" to="TextureButton4" method="_on_pressed"]
