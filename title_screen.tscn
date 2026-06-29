@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bdbohcp0lwp1x"]
+
+[ext_resource type="Script" uid="uid://b2r8xpvqdf0tv" path="res://title_screen.gd" id="1_v6p8y"]
+
+[sub_resource type="Gradient" id="Gradient_1s85s"]
+offsets = PackedFloat32Array(0, 0.5120482, 1)
+colors = PackedColorArray(0.19607843, 0.007843138, 0.2627451, 1, 0.38847667, 0.0542823, 0.6988598, 1, 0.19800767, 0.007420366, 0.26141807, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6gfnv"]
+gradient = SubResource("Gradient_1s85s")
+
+[node name="TitleScreen" type="Node2D" unique_id=73056194]
+script = ExtResource("1_v6p8y")
+
+[node name="Background" type="TextureRect" parent="." unique_id=111360918]
+offset_right = 1149.0
+offset_bottom = 646.0
+texture = SubResource("GradientTexture1D_6gfnv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=930695470]
+clip_contents = false
+offset_left = 313.0
+offset_top = 140.0
+offset_right = 867.0
+offset_bottom = 343.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "SYSADMIN"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2008744858]
+offset_left = 476.0
+offset_top = 314.0
+offset_right = 709.0
+offset_bottom = 606.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=300844388]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=54109058]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1032365765]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
