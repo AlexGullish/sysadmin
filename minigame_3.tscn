@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c43ck56fgak76"]
+
+[ext_resource type="Script" uid="uid://bxgiw8t2qe6cc" path="res://minigame_3.gd" id="1_cdg48"]
+[ext_resource type="Texture2D" uid="uid://1tik3ok0ukr3" path="res://scifi_panel_1_color_1k.png" id="1_t3ksd"]
+[ext_resource type="Script" uid="uid://bpb88wst08r73" path="res://paddle.gd" id="2_5xr8p"]
+[ext_resource type="Texture2D" uid="uid://bsbfb3lb0all5" path="res://sr20f9583311551.png" id="3_33dbb"]
+[ext_resource type="Script" uid="uid://h13wu1fedclm" path="res://ball.gd" id="3_cdg48"]
+[ext_resource type="PackedScene" uid="uid://dlodwni6ljp2c" path="res://minigame_timer.tscn" id="6_1i1uu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1urv3"]
+size = Vector2(285, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0roer"]
+size = Vector2(33, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gfnv"]
+size = Vector2(11, 656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33dbb"]
+size = Vector2(1159.25, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0okd"]
+size = Vector2(1133, 163)
+
+[node name="Node2D" type="Node2D" unique_id=1970222937]
+script = ExtResource("1_cdg48")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1935210354]
+offset_right = 1147.0
+offset_bottom = 1024.0
+texture = ExtResource("1_t3ksd")
+
+[node name="Paddle" type="CharacterBody2D" parent="." unique_id=953485603]
+script = ExtResource("2_5xr8p")
+
+[node name="ColorRect" type="ColorRect" parent="Paddle" unique_id=2094899676]
+offset_left = 445.0
+offset_top = 509.0
+offset_right = 733.0
+offset_bottom = 549.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle" unique_id=512998054]
+position = Vector2(589.5, 529.5)
+shape = SubResource("RectangleShape2D_1urv3")
+
+[node name="CPU" type="CharacterBody2D" parent="." unique_id=1019862323]
+script = ExtResource("3_cdg48")
+
+[node name="Sprite2D" type="Sprite2D" parent="CPU" unique_id=1145656444]
+position = Vector2(564.2999, 32.599995)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_33dbb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CPU" unique_id=1121028011]
+position = Vector2(563.8, 32.6)
+shape = SubResource("RectangleShape2D_0roer")
+
+[node name="Wall" type="Node2D" parent="." unique_id=318597581]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall" unique_id=1501970148]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/StaticBody2D" unique_id=23242]
+position = Vector2(-4.5, 318)
+shape = SubResource("RectangleShape2D_6gfnv")
+
+[node name="Wall2" type="Node2D" parent="." unique_id=2121720789]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall2" unique_id=598367170]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2/StaticBody2D" unique_id=399325662]
+position = Vector2(1151, 331)
+shape = SubResource("RectangleShape2D_6gfnv")
+
+[node name="Wall3" type="Node2D" parent="." unique_id=1297628604]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall3" unique_id=2051516820]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3/StaticBody2D" unique_id=1053148485]
+position = Vector2(573.375, -3)
+shape = SubResource("RectangleShape2D_33dbb")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1441806905]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=142086591]
+position = Vector2(574.5, 669.5)
+shape = SubResource("RectangleShape2D_l0okd")
+
+[node name="MinigameTimer" parent="." unique_id=27844687 instance=ExtResource("6_1i1uu")]
+
+[connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
