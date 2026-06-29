@@ -1,3 +1,63 @@
 [gd_scene format=3 uid="uid://b03nxu6c6wn60"]
 
+[ext_resource type="Script" uid="uid://cc5aow4vb7x4x" path="res://timer_screen.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://1tik3ok0ukr3" path="res://scifi_panel_1_color_1k.png" id="1_4quuv"]
+[ext_resource type="Texture2D" uid="uid://bsbfb3lb0all5" path="res://sr20f9583311551.png" id="3_lwxgr"]
+
 [node name="Node2D" type="Node2D" unique_id=1425281618]
+script = ExtResource("1_3mivm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1963565400]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1149.0
+offset_bottom = 886.0
+texture = ExtResource("1_4quuv")
+
+[node name="CPU_container" type="HBoxContainer" parent="." unique_id=1753900237]
+offset_left = 207.8
+offset_top = 84.985
+offset_right = 1004.8608
+offset_bottom = 224.17009
+
+[node name="CPU" type="TextureRect" parent="CPU_container" unique_id=1934821684]
+layout_mode = 2
+texture = ExtResource("3_lwxgr")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="CPU2" type="TextureRect" parent="CPU_container" unique_id=1417709068]
+layout_mode = 2
+texture = ExtResource("3_lwxgr")
+expand_mode = 2
+
+[node name="CPU3" type="TextureRect" parent="CPU_container" unique_id=1583824105]
+layout_mode = 2
+texture = ExtResource("3_lwxgr")
+expand_mode = 2
+
+[node name="CPU4" type="TextureRect" parent="CPU_container" unique_id=41961316]
+layout_mode = 2
+texture = ExtResource("3_lwxgr")
+expand_mode = 2
+
+[node name="CPU5" type="TextureRect" parent="CPU_container" unique_id=159226804]
+layout_mode = 2
+texture = ExtResource("3_lwxgr")
+expand_mode = 2
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1809346338]
+offset_left = 502.0
+offset_top = 255.0
+offset_right = 891.0
+offset_bottom = 453.0
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1846333995]
+offset_left = 546.0
+offset_top = 498.0
+offset_right = 635.0
+offset_bottom = 562.0
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
