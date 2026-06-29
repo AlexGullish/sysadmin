@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dnr8e2koufv3i"]
+
+[ext_resource type="Texture2D" uid="uid://1tik3ok0ukr3" path="res://scifi_panel_1_color_1k.png" id="1_pl8j0"]
+[ext_resource type="Texture2D" uid="uid://dtnorvol8rk4d" path="res://pixil-frame-0(1).png" id="2_46blr"]
+
+[node name="Node2D" type="Node2D" unique_id=1468504126]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1284510193]
+offset_right = 1154.0
+offset_bottom = 1024.0
+texture = ExtResource("1_pl8j0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1937034195]
+clip_contents = false
+offset_left = 313.0
+offset_top = 140.0
+offset_right = 867.0
+offset_bottom = 343.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "You Lose..."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1823680554]
+offset_left = 476.0
+offset_top = 314.0
+offset_right = 709.0
+offset_bottom = 606.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=110058183]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1696156399]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[node name="PixilFrame0(1)" type="Sprite2D" parent="." unique_id=1185259857]
+position = Vector2(1094, 298)
+rotation = -4.0282197
+scale = Vector2(0.14649999, 0.14909999)
+texture = ExtResource("2_46blr")
+flip_h = true
+
+[node name="PixilFrame0(1)2" type="Sprite2D" parent="." unique_id=2051015522]
+position = Vector2(95, 315)
+rotation = -2.2549653
+scale = Vector2(0.1356, 0.1377)
+texture = ExtResource("2_46blr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2070524125]
+offset_left = 93.0
+offset_top = 500.0
+offset_right = 124.0
+offset_bottom = 513.0
+offset_transform_enabled = true
+offset_transform_rotation = -2.2549653
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1108859384]
+offset_left = 1066.0
+offset_top = 498.0
+offset_right = 1097.0
+offset_bottom = 511.0
+offset_transform_enabled = true
+offset_transform_rotation = -4.0264745
+color = Color(0, 0, 0, 1)

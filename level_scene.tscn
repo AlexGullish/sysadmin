@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cc5aow4vb7x4x" path="res://timer_screen.gd" id="1_3mivm"]
 [ext_resource type="Texture2D" uid="uid://1tik3ok0ukr3" path="res://scifi_panel_1_color_1k.png" id="1_4quuv"]
 [ext_resource type="Texture2D" uid="uid://bsbfb3lb0all5" path="res://sr20f9583311551.png" id="3_lwxgr"]
+[ext_resource type="Texture2D" uid="uid://dtnorvol8rk4d" path="res://pixil-frame-0(1).png" id="4_lwxgr"]
 
 [node name="Node2D" type="Node2D" unique_id=1425281618]
 script = ExtResource("1_3mivm")
@@ -61,3 +62,9 @@ offset_right = 635.0
 offset_bottom = 562.0
 theme_override_font_sizes/normal_font_size = 42
 text = "0.0"
+
+[node name="PixilFrame0(1)" type="Sprite2D" parent="." unique_id=144002910]
+position = Vector2(753, 490.99997)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("4_lwxgr")
+flip_h = true
